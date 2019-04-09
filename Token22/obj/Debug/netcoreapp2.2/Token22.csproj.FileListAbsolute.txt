@@ -1,0 +1,14 @@
+D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.csproj.CoreCompileInputs.cache
+D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.AssemblyInfoInputs.cache
+D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.AssemblyInfo.cs
+D:\James\Token22\Token22\Token22\bin\Debug\netcoreapp2.2\Token22.deps.json
+D:\James\Token22\Token22\Token22\bin\Debug\netcoreapp2.2\Token22.runtimeconfig.json
+D:\James\Token22\Token22\Token22\bin\Debug\netcoreapp2.2\Token22.runtimeconfig.dev.json
+D:\James\Token22\Token22\Token22\bin\Debug\netcoreapp2.2\Token22.dll
+D:\James\Token22\Token22\Token22\bin\Debug\netcoreapp2.2\Token22.pdb
+D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.csprojAssemblyReference.cache
+D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.RazorAssemblyInfo.cache
+D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.RazorAssemblyInfo.cs
+D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.RazorTargetAssemblyInfo.cache
+D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.dll
+D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.pdb
