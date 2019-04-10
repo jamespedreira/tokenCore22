@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -25,6 +26,21 @@ namespace Geriatria.Api.Controllers
         {
             try
             {
+                using (var connection = new OracleConnection(_configuration.GetConnectionString("Oracle")))
+                {
+                    connection.Open();
+                    var command = connection.CreateCommand();
+                    command.CommandText = "SELECT * FROM TNU_USUARI WHERE USU_LOGIN = :USU_LOGIN";
+                    command.Parameters.Add(new OracleParameter("USU_LOGIN", request.Username));
+                    using (var dbReader = command.ExecuteReader())
+                    {
+                        if(dbReader.HasRows)
+                        {
+                            dbReader.Read();
+                        }
+                    }
+                }
+
                 if (request.Grant_Type != "password")
                     return BadRequest(new { error = "unsupported_grant_type" });
 

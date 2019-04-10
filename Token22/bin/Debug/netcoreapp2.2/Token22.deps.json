@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "c2ce3e2510a9061cd7575d8359d6ac7fc48159b9"
+    "signature": "2c0384c3dfe5b1d3b94c44792f7981b1f5609374"
   },
   "compilationOptions": {
     "defines": [
@@ -27,7 +27,8 @@
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
-          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.2105168"
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.2105168",
+          "Oracle.ManagedDataAccess.Core": "2.18.6"
         },
         "runtime": {
           "Token22.dll": {}
@@ -206,6 +207,17 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0"
+        }
+      },
+      "Oracle.ManagedDataAccess.Core/2.18.6": {
+        "runtime": {
+          "lib/netstandard2.0/Oracle.ManagedDataAccess.dll": {
+            "assemblyVersion": "2.0.18.3",
+            "fileVersion": "2.0.18.3"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Oracle.ManagedDataAccess.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3284,6 +3296,13 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Oracle.ManagedDataAccess.Core/2.18.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+mS+PFu4BnTKzw2/fOpPEEOracUhIGVyZlu926iTQa7QRb00j6x+GyaIzVvYrQlPQ+FqmCuHpx018yx5agh6Fw==",
+      "path": "oracle.manageddataaccess.core/2.18.6",
+      "hashPath": "oracle.manageddataaccess.core.2.18.6.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",
