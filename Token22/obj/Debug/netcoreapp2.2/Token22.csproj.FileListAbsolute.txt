@@ -12,3 +12,17 @@ D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.RazorAssemblyIn
 D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.RazorTargetAssemblyInfo.cache
 D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.dll
 D:\James\Token22\Token22\Token22\obj\Debug\netcoreapp2.2\Token22.pdb
+D:\MAGIT\Openshift\TokenCore\Token22\bin\Debug\netcoreapp2.2\Token22.deps.json
+D:\MAGIT\Openshift\TokenCore\Token22\bin\Debug\netcoreapp2.2\Token22.runtimeconfig.json
+D:\MAGIT\Openshift\TokenCore\Token22\bin\Debug\netcoreapp2.2\Token22.runtimeconfig.dev.json
+D:\MAGIT\Openshift\TokenCore\Token22\bin\Debug\netcoreapp2.2\Token22.dll
+D:\MAGIT\Openshift\TokenCore\Token22\bin\Debug\netcoreapp2.2\Token22.pdb
+D:\MAGIT\Openshift\TokenCore\Token22\obj\Debug\netcoreapp2.2\Token22.csprojAssemblyReference.cache
+D:\MAGIT\Openshift\TokenCore\Token22\obj\Debug\netcoreapp2.2\Token22.csproj.CoreCompileInputs.cache
+D:\MAGIT\Openshift\TokenCore\Token22\obj\Debug\netcoreapp2.2\Token22.RazorAssemblyInfo.cache
+D:\MAGIT\Openshift\TokenCore\Token22\obj\Debug\netcoreapp2.2\Token22.RazorAssemblyInfo.cs
+D:\MAGIT\Openshift\TokenCore\Token22\obj\Debug\netcoreapp2.2\Token22.AssemblyInfoInputs.cache
+D:\MAGIT\Openshift\TokenCore\Token22\obj\Debug\netcoreapp2.2\Token22.AssemblyInfo.cs
+D:\MAGIT\Openshift\TokenCore\Token22\obj\Debug\netcoreapp2.2\Token22.RazorTargetAssemblyInfo.cache
+D:\MAGIT\Openshift\TokenCore\Token22\obj\Debug\netcoreapp2.2\Token22.dll
+D:\MAGIT\Openshift\TokenCore\Token22\obj\Debug\netcoreapp2.2\Token22.pdb

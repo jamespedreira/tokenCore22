@@ -31,7 +31,7 @@ namespace Geriatria.Api.Controllers
                 var username = request.Username != null ? request.Username.ToUpper() : request.Username;
                 var password = request.Password != null ? request.Password.ToUpper() : request.Password;
                 
-                if( username != "ADMIN" || password != "ADMIN")
+                if( username != "ADMIN" || password != "ADMIN1")
                 {
                     throw new ApplicationException("Usuário e senha inválido");
                 }
