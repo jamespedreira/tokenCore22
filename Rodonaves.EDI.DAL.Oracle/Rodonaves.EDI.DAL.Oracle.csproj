@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rodonaves.EDI.DAL.Interfaces\Rodonaves.EDI.DAL.Interfaces.csproj" />
+    <ProjectReference Include="..\Rodonaves.EDI.DAL.PostgreSQL\Rodonaves.EDI.DAL.PostgreSQL.csproj" />
+    <ProjectReference Include="..\Rodonaves.EDI.Model\Rodonaves.EDI.Model.csproj" />
+  </ItemGroup>
+
+</Project>

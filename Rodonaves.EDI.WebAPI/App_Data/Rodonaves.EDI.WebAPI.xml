@@ -1,0 +1,682 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rodonaves.EDI.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.AgreementController.GetAll">
+            <summary> Convênio </summary>
+            <remarks>Retorna todos os Convênios</remarks>
+            <returns>Lista de Convênios</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.AgreementController.GetByParams(Rodonaves.EDI.WebAPI.Requests.AgreementRequest)">
+            <summary>Convênio</summary>
+            <remarks>Retorna os convênios por parâmetros</remarks>
+            <returns>Lista de Convênio</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.AgreementController.Insert(Rodonaves.EDI.DTO.AgreementDTO)">
+            <summary>Cadastro de convênio</summary>
+            <remarks>Insere um novo convênio</remarks>
+            <param name="dto">Objeto que representa um convênio</param>
+            <returns>Retorna se a inserção foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.AgreementController.Update(Rodonaves.EDI.DTO.AgreementDTO)">
+            <summary>Atualização de convênio</summary>
+            <remarks>Atualiza um convênio cadastrado</remarks>
+            <param name="dto">Objeto que representa um convênio</param>
+            <returns>Retorna se a atualização foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.AgreementController.Delete(System.Int32)">
+            <summary>Remoção de convênio</summary>
+            <remarks>Remove um convênio cadastrado</remarks>
+            <param name="id">Identificador único do convênio</param>
+            <returns>Retorna se a atualização foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.BandTypeController.GetBandTypes(System.String)">
+            <summary>Retorna Opção de bandas</summary>
+            <remarks>Retorna os opções de banda</remarks>
+            <returns>Tipos de banda</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ColumnTypeController.GetColumnTypes(System.String)">
+            <summary>Retorna Opção de colunas</summary>
+            <remarks>Retorna os tipos de colunas que se pode selecionar</remarks>
+            <returns>Tipos de colunas</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ColumnTypeController.GetFormatTypes">
+            <summary>Retorna Opção de formato da coluna</summary>
+            <remarks>Retorna os opções de formato da coluna</remarks>
+            <returns>Formato da coluna</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.CustomerController.GetAll">
+            <summary>Clientes</summary>
+            <remarks>Retorna todos os Clientes</remarks>
+            <returns>Lista de Clientes</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.CustomerController.GetByParams(Rodonaves.EDI.WebAPI.Requests.CustomerGetRequest)">
+            <summary>Clientes</summary>
+            <remarks>Retorna todos os Clientes compatíveis com os filtros informado</remarks>
+            <returns>Lista de Clientes</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.CustomerController.GetByProcessType(Rodonaves.EDI.WebAPI.Requests.CustomerGetByProcessTypeRequest)">
+            <summary>Clientes</summary>
+            <remarks>Retorna todos os Clientes filtrado por tipo de processo do arcodo</remarks>
+            <returns>Lista de Clientes</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.DashboardController.GetProcesses">
+            <summary>Retorna Processos</summary>
+            <remarks>Retorna os tipos de processos que se pode selecionar</remarks>
+            <returns>Tipos de processos</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.DashboardController.GetAsync(Rodonaves.EDI.WebAPI.Requests.DetailedStatusRequest)">
+            <summary>Retorna lista dos processos EDI</summary>
+            <remarks>Retorna a lista de objetos que representam os processo em andamento e ja concluidos</remarks>
+            <returns>Lista de processos EDI</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.DashboardController.GetLogsAsync(System.Int64)">
+            <summary>Retorna detalhes do processamento</summary>
+            <remarks>Retorna detalhes do processamento da geração do retorno</remarks>
+            <returns>Objeto com as informações do detalhes do processamento</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.DashboardController.GetResumeAsync">
+            <summary>Retorna Processos resumidos para o gráfico</summary>
+            <remarks>Retorna os processos agrupados por tipo e por status de progresso</remarks>
+            <returns>Objeto contendo Total, Tipo e Progresso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.DashboardController.GetTotalOperationAsync">
+            <summary>Retorna número de fretes por status</summary>
+            <remarks>Retorna número de fretes por statuso</remarks>
+            <returns>Objeto contendo Total, Tipo e status</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.DashboardController.GetAllQueues">
+            <summary>Retorna status atual da fila do EDI</summary>
+            <remarks>Retorna status atual da fila do EDI</remarks>
+            <returns>Objeto contendo Total de item em processamento, não processados e concluídos</returns>
+        </member>
+        <member name="T:Rodonaves.EDI.WebAPI.Controllers.GenerateReturnController">
+            <summary>
+            Geração de retorno
+            </summary>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.GenerateReturnController.GetAll">
+            <summary>Geração de retorno</summary>
+            <remarks>Retorna todos os gerações de retorno</remarks>
+            <returns>Lista de gerações de retorno</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.GenerateReturnController.Insert(Rodonaves.EDI.DTO.GenerateReturnDTO)">
+            <summary>Geração de retorno</summary>
+            <remarks>Insere uma nova geração de retorno</remarks>
+            <returns>Identificador único do retorno</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutFileNameController.GetAll">
+            <summary> Arquivo de layout </summary>
+            <remarks>Retorna todos os arquivos de layout</remarks>
+            <returns>Lista de arquivos do layout</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutFileNameController.GetByParams(Rodonaves.EDI.WebAPI.Requests.LayoutFileNameGETRequest)">
+            <summary> Arquivo de layout </summary>
+            <remarks>Retorna todos os arquivos de layout</remarks>
+            <returns>Lista de arquivos do layout</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutFileNameController.GetByProcessType(Rodonaves.EDI.WebAPI.Requests.LayoutFileNameGetByProcessTypeRequest)">
+            <summary>Arquivo de layout</summary>
+            <remarks>Retorna todos os arquivos de layout filtrado pelo tipo de processo do arcodo</remarks>
+            <returns>Lista de arquivos do layout</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutFileNameController.GetScriptColumnsAsync(System.Collections.Generic.List{Rodonaves.EDI.DTO.LayoutBandDTO})">
+            <summary>Retorna as colunas do script</summary>
+            <remarks>Retorna as colunas do script</remarks>
+            <returns>colunas do script</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutGroupController.GetAll">
+            <summary>Grupo de Layout</summary>
+            <remarks>Retorna todos os grupos de layout</remarks>
+            <returns>Lista de Grupos de Layout</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutGroupController.GetByParams(Rodonaves.EDI.WebAPI.Requests.LayoutGroupRequest)">
+            <summary>Grupo de Layout</summary>
+            <remarks>Retorna os grupos de layout por parâmetros</remarks>
+            <returns>Lista de Grupos de Layout</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutGroupController.Insert(Rodonaves.EDI.DTO.LayoutGroupDTO)">
+            <summary>Cadastro de Grupo de Layout</summary>
+            <remarks>Insere um novo grupo de layout</remarks>
+            <param name="dto">Objeto que representa um grupo de layout</param>
+            <returns>Retorna se a inserção foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutGroupController.Update(Rodonaves.EDI.DTO.LayoutGroupDTO)">
+            <summary>Atualização de Grupo de Layout</summary>
+            <remarks>Atualiza um grupo de layout cadastrado</remarks>
+            <param name="dto">Objeto que representa um grupo de layout</param>
+            <returns>Retorna se a atualização foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutGroupController.Delete(System.Int32)">
+            <summary>Remoção de Grupo de Layout</summary>
+            <remarks>Remove um grupo de layout cadastrado</remarks>
+            <param name="id">Identificador único do grupo de layout</param>
+            <returns>Retorna se a atualização foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutHeaderController.GetAll">
+            <summary>Layout</summary>
+            <remarks>Retorna todos os layouts</remarks>
+            <returns>Lista de Layout</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutHeaderController.GetByParams(Rodonaves.EDI.WebAPI.Requests.LayoutHeaderRequest)">
+            <summary>Layout</summary>
+            <remarks>Retorna os layouts por parâmetros</remarks>
+            <returns>Lista de Layout</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutHeaderController.Insert(Rodonaves.EDI.DTO.LayoutHeaderDTO)">
+            <summary>Cadastro de Layout</summary>
+            <remarks>Insere um novo layout</remarks>
+            <param name="dto">Objeto que representa um layout</param>
+            <returns>Retorna se a inserção foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutHeaderController.Update(Rodonaves.EDI.DTO.LayoutHeaderDTO)">
+            <summary>Atualização de Layout</summary>
+            <remarks>Atualiza um layout cadastrado</remarks>
+            <param name="dto">Objeto que representa um layout</param>
+            <returns>Retorna se a atualização foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutHeaderController.Delete(System.Int32)">
+            <summary>Remoção de Layout</summary>
+            <remarks>Remove um layout cadastrado</remarks>
+            <param name="id">Identificador único do layout</param>
+            <returns>Retorna se a atualização foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.LayoutHeaderController.GetByProcessType(Rodonaves.EDI.WebAPI.Requests.LayoutHeaderGetByProcessTypeRequest)">
+            <summary>Layout</summary>
+            <remarks>Retorna todos os Layouts ifiltrados por tipo de processo do arcodo</remarks>
+            <returns>Lista de Layout</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.NatureOccurrenceController.GetNatureOccurrences">
+            <summary>Retorna Naturezas de Ocorrência</summary>
+            <remarks>Retorna os tipos de Naturezas de Ocorrência</remarks>
+            <returns>Natureza de Ocorrências</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.PeriodicityTypeController.GetPeriodicities">
+            <summary>Retorna Periodicidades</summary>
+            <remarks>Retorna os tipos de periodicidade que se pode selecionar</remarks>
+            <returns>Tipos de periodicidades</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.PersonController.GetAll">
+            <summary>Pessoa</summary>
+            <remarks>Retorna todos as Pessoas da EDI</remarks>
+            <returns>Lista de Pessoas EDI</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.PersonController.GetPersonExternal(Rodonaves.EDI.WebAPI.Requests.PersonRequest)">
+            <summary>Pessoa</summary>
+            <remarks>Retorna todos as Pessoas API Externa</remarks>
+            <returns>Lista de Pessoas API Externa</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ProcessTypeController.GetProcesses">
+            <summary>Retorna Processos</summary>
+            <remarks>Retorna os tipos de processos que se pode selecionar</remarks>
+            <returns>Tipos de processos</returns>
+        </member>
+        <member name="T:Rodonaves.EDI.WebAPI.Controllers.ProviderController">
+            <summary>
+            API de Provedores.
+            </summary>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ProviderController.#ctor(Rodonaves.EDI.BLL.Interfaces.IProvider)">
+            <summary>Construtor do controller de provedores</summary>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ProviderController.GetAll">
+            <summary>Provedores</summary>
+            <remarks>Retorna todos os provedores</remarks>
+            <returns>Lista de Provedores</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ProviderController.GetByParams(Rodonaves.EDI.WebAPI.Requests.ProviderRequest)">
+            <summary>Provedores</summary>
+            <remarks>Retorna o provedores por parâmetros</remarks>
+            <returns>Provedor</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ProviderController.Insert(Rodonaves.EDI.DTO.ProviderDTO)">
+            <summary>Cadastro de Provedores</summary>
+            <remarks>Insere um novo provedor</remarks>
+            <param name="dto">Objeto que representa um provedor</param>
+            <returns>Retorna se a inserção foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ProviderController.TestConnection(Rodonaves.EDI.WebAPI.Requests.TestConnectionRequest)">
+            <summary>
+            Testa a string de conexão informada
+            </summary>
+            <returns>Retorna se a conexão foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ProviderController.Update(Rodonaves.EDI.DTO.ProviderDTO)">
+            <summary>Atualização de Provedores</summary>
+            <remarks>Atualiza um provedor cadastrado</remarks>
+            <param name="dto">Objeto que representa um provedor</param>
+            <returns>Retorna se a atualização foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ProviderController.Delete(System.Int32)">
+            <summary>Remoção de Provedores</summary>
+            <remarks>Remove um provedor cadastrado</remarks>
+            <param name="id">Identificador único do provedor</param>
+            <returns>Retorna se a atualização foi realizada com sucesso</returns>
+        </member>
+        <member name="T:Rodonaves.EDI.WebAPI.Controllers.ScriptController">
+            <summary>
+            API de Scripts.
+            </summary>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ScriptController.#ctor(Rodonaves.EDI.BLL.Interfaces.IScript)">
+            <summary>Contrutor do controller scripts</summary>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ScriptController.GetAll">
+            <summary>Scripts</summary>
+            <remarks>Retorna todos os scripts</remarks>
+            <returns>Lista de Scripts</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ScriptController.GetByParams(Rodonaves.EDI.WebAPI.Requests.ScriptRequest)">
+            <summary>Scripts</summary>
+            <remarks>Retorna os scripts por parâmetros</remarks>
+            <returns>Lista de Scripts</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ScriptController.Insert(Rodonaves.EDI.DTO.ScriptDTO)">
+            <summary>Cadastro de Scripts</summary>
+            <remarks>Insere um novo script</remarks>
+            <param name="dto">Objeto que representa um script</param>
+            <returns>Retorna se a inserção foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ScriptController.Update(Rodonaves.EDI.DTO.ScriptDTO)">
+            <summary>Atualização de Script</summary>
+            <remarks>Atualiza um script cadastrado</remarks>
+            <param name="dto">Objeto que representa um script</param>
+            <returns>Retorna se a atualização foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ScriptController.Delete(System.Int32)">
+            <summary>Remoção de Scripts</summary>
+            <remarks>Remove um script cadastrado</remarks>
+            <param name="id">Identificador único do script</param>
+            <returns>Retorna se a remoção foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.ScriptController.GetExplainPlan(Rodonaves.EDI.WebAPI.Requests.QueryRequest)">
+            <summary>Retorna o plano de execução do script</summary>
+            <returns>Plano de execução</returns>
+        </member>
+        <member name="T:Rodonaves.EDI.WebAPI.Controllers.TaskController">
+            <summary>API de Tarefas</summary>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.TaskController.#ctor(Rodonaves.EDI.BLL.Interfaces.ITask)">
+            <summary>Construtor do ApiController de Tarefas</summary>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.TaskController.GetAll">
+            <summary>Provedores</summary>
+            <remarks>Retorna todos os provedores</remarks>
+            <returns>Lista de Provedores</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.TaskController.GetByParams(Rodonaves.EDI.WebAPI.Requests.TaskRequest)">
+            <summary>Provedores</summary>
+            <remarks>Retorna o provedores por parâmetros</remarks>
+            <returns>Provedor</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.TaskController.Insert(Rodonaves.EDI.DTO.TaskDTO)">
+            <summary>Cadastro de Tarefas</summary>
+            <remarks>Insere uma nova tarefa</remarks>
+            <param name="dto">Objeto que representa uma tarefa</param>
+            <returns>Retorna se a inserção foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.TaskController.Update(Rodonaves.EDI.DTO.TaskDTO)">
+            <summary>Atualização de Tarefas</summary>
+            <remarks>Atualiza um tarefa cadastrada</remarks>
+            <param name="dto">Objeto que representa uma tarefa</param>
+            <returns>Retorna se a atualização foi realizada com sucesso</returns>
+        </member>
+        <member name="M:Rodonaves.EDI.WebAPI.Controllers.TaskController.Delete(System.Int32)">
+            <summary>Remoção de Tarefa</summary>
+            <remarks>Remove uma tarefa cadastrada</remarks>
+            <param name="id">Identificador único da tarefa</param>
+            <returns>Retorna se a atualização foi realizada com sucesso</returns>
+        </member>
+        <member name="T:Rodonaves.EDI.WebAPI.Requests.AgreementRequest">
+            <summary>
+            Representa os parâmetros de busco do acordo
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.AgreementRequest.Id">
+            <summary>
+            Identificador do acordo
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.AgreementRequest.CustomerId">
+            <summary>
+            Identificado do cliente
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.AgreementRequest.CustomerDescription">
+            <summary>
+            Descrição do cliente
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.AgreementRequest.CustomerTaxIdRegistration">
+            <summary>
+            CPF/CNPJ do cliente
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.AgreementRequest.Active">
+            <summary>
+            Status do acordo
+            </summary>
+        </member>
+        <member name="T:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.Id">
+            <summary>
+            Identificador único da configuração
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.Frequence">
+            <summary>
+            Identificador do tipo de frequencia
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.Interval">
+            <summary>
+            intervalo de execução da tarefa
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.BeginDate">
+            <summary>
+            Dia de inicio da tarefa
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.BeginTime">
+            <summary>
+            Horário em que a tarefa irá iniciar o processo
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.ExpireDate">
+            <summary>
+            Data em que a tarefa vai deixar de processar
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.ExpireTime">
+            <summary>
+            Horário em que a tarefa vai deixar de processar
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.Sunday">
+            <summary>
+            Se a tarefa executa no domingo
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.Monday">
+            <summary>
+            Se a tarefa executa na segunda
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.Tuesday">
+            <summary>
+            Se a tarefa executa na terça
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.Wednesday">
+            <summary>
+            Se a tarefa executa na quarta
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.Thursday">
+            <summary>
+            Se a tarefa executa na quinta
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.Friday">
+            <summary>
+            Se a tarefa executa na sexta
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.Saturday">
+            <summary>
+            Se a tarefa executa no sabado
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.Enable">
+            <summary>
+            Se a tarefa está habilitada
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.DaysOfMonth">
+            <summary>
+            Dias especificos do mês que a tarefa irá processar
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ConfigurationRequest.Months">
+            <summary>
+            Meses especificos em que a tarefa irá processar
+            </summary>
+        </member>
+        <member name="T:Rodonaves.EDI.WebAPI.Requests.CustomerGetByProcessTypeRequest">
+            <summary>
+            Representa os parâmetros de busca do cliente por acordo
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.CustomerGetByProcessTypeRequest.ProcessType">
+            <summary>
+            Tipo de processo do acordo
+            </summary>
+        </member>
+        <member name="T:Rodonaves.EDI.WebAPI.Requests.CustomerGetRequest">
+            <summary>
+            Classe que representa os parâmetros de busca do cliente
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.CustomerGetRequest.Description">
+            <summary>
+            Descrição do Cliente
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.CustomerGetRequest.TaxIdRegistration">
+            <summary>
+            CPF ou CNPJ do cliente
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.DetailedStatusRequest.customer">
+            <summary>
+            Customer description
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.DetailedStatusRequest.key">
+            <summary>
+            Document key
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.DetailedStatusRequest.process">
+            <summary>
+            Process
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.LayoutGroupRequest.id">
+            <summary>
+            Identificador único do grupo de layout
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.LayoutGroupRequest.description">
+            <summary>
+            Descrição do grupo de layout
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.LayoutGroupRequest.developmentCompany">
+            <summary>
+            Empresa desenvolvedora do grupo de layout
+            </summary>
+        </member>
+        <member name="T:Rodonaves.EDI.WebAPI.Requests.LayoutFileNameGetByProcessTypeRequest">
+            <summary>
+            Representa os parâmetros de busca do cliente por acordo
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.LayoutFileNameGetByProcessTypeRequest.ProcessType">
+            <summary>
+            Tipo de processo do acordo
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.LayoutFileNameGetByProcessTypeRequest.CustomerId">
+            <summary>
+            Cliente do acordo
+            </summary>
+        </member>
+        <member name="T:Rodonaves.EDI.WebAPI.Requests.LayoutFileNameGETRequest">
+            <summary>
+            Representa o objeto de busca para o arquivo de layout
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.LayoutFileNameGETRequest.Id">
+            <summary>
+            Identificado único
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.LayoutFileNameGETRequest.LayoutHeaderId">
+            <summary>
+            Identificador de referência do Layout
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.LayoutFileNameGETRequest.Description">
+            <summary>
+            Descrição
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.LayoutFileNameGETRequest.Default">
+            <summary>
+            Padrão
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.LayoutFileNameGETRequest.Active">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="T:Rodonaves.EDI.WebAPI.Requests.LayoutHeaderGetByProcessTypeRequest">
+            <summary>
+            Representa os parâmetros de busca do cliente por acordo
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.LayoutHeaderGetByProcessTypeRequest.ProcessType">
+            <summary>
+            Tipo de processo do acordo
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.LayoutHeaderGetByProcessTypeRequest.CustomerId">
+            <summary>
+            Cliente do acordo
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.PagedRequest.page">
+            <summary>
+            Página atual da requisição.
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.PagedRequest.amountByPage">
+            <summary>
+            Quantidade de itens por Página (Max. 100).
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.PersonRequest.Description">
+            <summary>
+            Descrição do Nome da Pessoa
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.PersonRequest.TaxIdRegistration">
+            <summary>
+            CPF/CNPJ da pessoa
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ProviderRequest.id">
+            <summary>
+            Identificador único do provedor
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ProviderRequest.providerType">
+            <summary>
+            Tipo do provedor
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ProviderRequest.connecionString">
+            <summary>
+            Conexão
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ProviderRequest.description">
+            <summary>
+            Descrição do provedor
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ProviderRequest.name">
+            <summary>
+            Nome do provedor
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.QueryRequest.ProviderId">
+            <summary>
+            Identificados único do provedor
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.QueryRequest.Query">
+            <summary>
+            Query
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ScriptRequest.Id">
+            <summary>
+            Identificador único do provedor
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ScriptRequest.ProviderId">
+            <summary>
+            Tipo do provedor
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ScriptRequest.Description">
+            <summary>
+            Descrição
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ScriptRequest.Script">
+            <summary>
+            Script
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ScriptRequest.BandType">
+            <summary>
+            Tipo de banda
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.ScriptRequest.ProcessType">
+            <summary>
+            Processo
+            </summary>
+        </member>
+        <member name="T:Rodonaves.EDI.WebAPI.Requests.TaskRequest">
+            <summary>
+            TaskRequest
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.TaskRequest.id">
+            <summary>
+            Identificador único da tarefa
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.TaskRequest.description">
+            <summary>
+            Descrição da tarefa
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.TaskRequest.name">
+            <summary>
+            Nome da tarefa
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.TestConnectionRequest.ConnectionString">
+            <summary>
+            Conexão
+            </summary>
+        </member>
+        <member name="P:Rodonaves.EDI.WebAPI.Requests.TestConnectionRequest.ProviderType">
+            <summary>
+            Provedor
+            </summary>
+        </member>
+    </members>
+</doc>

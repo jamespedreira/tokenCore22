@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="hna3adeq.j0r~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Rodonaves.Core" Version="5.1.12-Alpha" />
+    <PackageReference Include="RTEFramework.Entitites" Version="5.1.0-Alpha" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rodonaves.EDI.Enums\Rodonaves.EDI.Enums.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rodonaves.EDI.BLL.Interfaces\Rodonaves.EDI.BLL.Interfaces.csproj" />
+    <ProjectReference Include="..\Rodonaves.EDI.BLL\Rodonaves.EDI.BLL.csproj" />
+    <ProjectReference Include="..\Rodonaves.EDI.DAL.Oracle\Rodonaves.EDI.DAL.Oracle.csproj" />
+    <ProjectReference Include="..\Rodonaves.EDI.DAL.PostgreSQL\Rodonaves.EDI.DAL.PostgreSQL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.dependencyinjection.abstractions\2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Rodonaves.TaskExecutor.Infra">
+      <HintPath>..\dependencies\Rodonaves.TaskExecutor.Infra.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
