@@ -19,7 +19,6 @@ namespace Token22
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-            
                 .UseStartup<Startup>();
     }
 }

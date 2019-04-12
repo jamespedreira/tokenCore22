@@ -36,6 +36,7 @@ namespace Token22
             }
 
             app.UseMvc();
+            app.UseCors();
         }
     }
 }
